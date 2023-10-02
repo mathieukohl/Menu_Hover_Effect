@@ -1,10 +1,14 @@
+/* Importing a font from Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300&display=swap");
 
+/* Resetting default margin, padding, and box-sizing for all elements */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Cairo', sans-serif;}
+
+/* Styles for the entire body of the page */  
 body {
   display: flex;
   justify-content: center;
@@ -13,29 +17,41 @@ body {
   overflow: hidden;
   background: #dcd9cd;
 }
+
+/* Styles for unordered list (menu) */
 ul {
   position: relative;
 }
+
+/* Styles for list items in the menu */
 ul li {
-  list-style: none;
+  list-style: none; /* Remove default list style */
   text-align: center;
 }
+
+/* Styles for links in list items */
 ul li a {
   color: #333;
-  text-decoration: none;
+  text-decoration: none; /* Remove underline from links */
   font-size: 3em;
   padding: 5px 20px;
   display: inline-flex;
   font-weight: 700;
   transition: 0.5s;
 }
+
+/* Hover effect for links in the menu */
 ul:hover li a {
   color: #0002;
 }
+
+/* Hover effect for list items */
 ul li:hover a {
   color: #000;
   background: transparent;
 }
+
+/* Styles for a pseudo-element before the link text */
 ul li a:before {
   content: "";
   position: absolute;
@@ -55,6 +71,8 @@ ul li a:before {
   letter-spacing: 500px;
   transition: letter-spacing 0.5s, left 0.5s;
 }
+
+/* Hover effect for the pseudo-element */
 ul li a:hover:before {
   content: attr(data-text);
   opacity: 1;
@@ -63,14 +81,16 @@ ul li a:hover:before {
   width: 1800px;
   height: 1800px;
 }
+
+/* Apply specific styles based on the index of list items */
 ul li:nth-child(6n + 1) a:before {
-  background: #472646;
+  background: #472646; /* Background color for first, seventh, thirteenth, etc. items */
 }
 ul li:nth-child(6n + 2) a:before {
-  background: #6a365c;
+  background: #6a365c; /* Background color for second, eighth, fourteenth, etc. items */
 }
 ul li:nth-child(6n + 3) a:before {
-  background: #a04e7a;
+  background: #a04e7a; /* Background color for third, ninth, fifteenth, etc. items */
 }
 ul li:nth-child(6n + 4) a:before {
   background: #e96f9f;
